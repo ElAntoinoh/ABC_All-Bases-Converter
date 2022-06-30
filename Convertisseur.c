@@ -47,7 +47,7 @@ void convertir(int previousBase, int newBase, char* num) {
     
     while( puissance >= 0 ) {
         // Détermination du nouveau caractère
-        newChar = (int)(decVal / pow(newBase, puissance)) + ( (int)(decVal / pow(newBase, puissance)) < 10 ? 48 : 86 );
+        newChar = (int)(decVal / pow(newBase, puissance)) + ( (int)(decVal / pow(newBase, puissance)) < 10 ? 48 : 87 );
         
         // Ajout du caractère à la chaîne
         newStr[puissanceMax - puissance] = newChar;
@@ -68,5 +68,5 @@ void convertir(int previousBase, int newBase, char* num) {
 
 int trouverValeur(char c) {
     if( isdigit(c) ) return (int)c - 48;
-    else             return (int)c - 86;
+    else             return (int)c - 87;
 }
